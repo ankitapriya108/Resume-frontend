@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* navbar{
+    height: 100px;
+    width: 100%;
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50rem;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.logo p{
+    font-size: 1.5rem;
+}
+input[type="text"] {
+    height: 45px;
+    border-radius: 20px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid gray;
+}
+.create-box {
+    height: 90px;
+    width: 90px;
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 1rem;
+  
+    margin-left: 13rem;
+    margin-top: 4rem;
+} */

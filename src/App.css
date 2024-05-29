@@ -1,0 +1,28 @@
+.registeration{
+  background: linear-gradient(to right,rgb(0, 0, 0),rgb(23, 127, 168),rgb(0, 0, 0));
+background-clip: text;
+color: transparent;
+}
+.login{
+  background: linear-gradient(to right,rgb(0, 0, 0),rgb(23, 127, 168),rgb(0, 0, 0));
+  background-clip: text;
+  color: transparent;
+  }
+.register-btn{
+  background: linear-gradient(to right,rgb(0, 0, 0),rgb(23, 127, 168),rgb(0, 0, 0));
+
+}
+.login-btn{
+  background: linear-gradient(to right,rgb(0, 0, 0),rgb(23, 127, 168),rgb(0, 0, 0));
+ 
+
+}
+.box{
+box-shadow: 7px 7px 7px 10px rgba(37, 147, 180, 0.589);
+overflow: hidden;
+}
+.bg-register{
+  background-image: url(registeration.avif);
+  
+
+}
