@@ -88,7 +88,7 @@ function RegisterPage() {
               <p className='text-green-700 text-center font-medium text-xl mt-[1rem]'>{registerStatus}</p>
             )}
             {registerStatus && (
-              <NavLink to="/login"
+              <NavLink to="/"
                 className='border-2 border-black bg-white px-2 py-2 text-center w-[20%]  mt-[1rem]  font-bold rounded-xl ml-[13rem] inline-block'>
                 NEXT
               </NavLink>
