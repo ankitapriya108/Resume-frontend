@@ -21,6 +21,7 @@ function App() {
 
 const [image,setImage] = useState("")
 const [name,setName] = useState("")
+const [email,setEmail] = useState("")
 const [role,setRole] = useState("")
 const [totalExp,setTotalExp] = useState("")
 const [about,setAbout] = useState("")
@@ -49,12 +50,12 @@ const [register,setRegister] = useState({
 
   return (
     <>
-      <userData.Provider value={{name,setName,role,setRole,totalExp,setTotalExp,about,setAbout,image,setImage,aboutPoint,setAboutPoint,data, setData,workExperience,setWorkExperience,register,setRegister}}>
+      <userData.Provider value={{name,setName,email,setEmail,role,setRole,totalExp,setTotalExp,about,setAbout,image,setImage,aboutPoint,setAboutPoint,data, setData,workExperience,setWorkExperience,register,setRegister}}>
     
       <BrowserRouter>
       <Routes>
-      <Route path ='/' element={<RegisterPage/>}/>
-      <Route path ='/login' element={<LoginPage/>}/>
+      <Route path ='/register' element={<RegisterPage/>}/>
+      <Route path ='/' element={<LoginPage/>}/>
         <Route path ='/create' element={<><Home/> <Create/></>}/>
 
         <Route path='/new' element = {<ResumeWrapper/>}>

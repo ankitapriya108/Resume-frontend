@@ -7,6 +7,8 @@ function UserResume() {
     seImage,
     name,
     setName,
+    email,
+    setEmail,
     role,
     setRole,
     totalExp,
@@ -42,6 +44,9 @@ function UserResume() {
           <div className=" flex gap-[5px] flex-col font-medium">
             <h2>
               Name: <span className="pl-2 font-normal">{name}</span>
+            </h2>
+            <h2>
+              Email: <span className="pl-2 font-normal">{email}</span>
             </h2>
             <p>
               Role: <span className="pl-2 font-normal">{role}</span>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 
@@ -30,6 +30,7 @@ function LoginPage() {
       })
       .then((data) => {
         console.log('Login successful:', data);
+        sessionStorage.setItem("email", email)
       
         window.location.href = '/create'; 
       })
@@ -95,8 +96,12 @@ function LoginPage() {
                 <p className='text-red-700 text-center font-medium text-xl mt-[1rem]'>{errorMessage}</p>
               )}
 
-        
-              <button type='submit' className='login-btn py-2 text-center w-[70%] ml-[5rem] mt-[1.5rem] border-2  text-white font-bold rounded-xl'>LOG-IN</button>
+               <div className='flex flex-col '>
+               <button type='submit' className='login-btn py-2 text-center w-[70%] ml-[5rem] mt-[1.5rem] border-2  text-white font-bold rounded-xl'>LOG-IN</button>
+              
+              <Link to='/register' className='login-btn py-2 text-center  w-[70%] ml-[5rem] mt-[1.5rem] border-2  text-white font-bold rounded-xl'>New user</Link>
+               </div>
+             
               
             </form>
           </div>
