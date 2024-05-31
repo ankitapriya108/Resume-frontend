@@ -186,7 +186,7 @@
 
 
 
-// Import necessary hooks and icons
+
 import React, { useState, useEffect } from 'react';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { Link, useNavigate } from 'react-router-dom';
@@ -209,7 +209,7 @@ function Create() {
           return;
         }
 
-        const response = await axios.get(`http://localhost:8000/userData?email=${userEmail}`);
+        const response = await axios.get(`https://resume-backend-7ze5.onrender.com/userData?email=${userEmail}`);
         const { user, resumeProfiles } = response.data;
         console.log("Fetched data:", response.data);
 
@@ -230,7 +230,7 @@ function Create() {
   const handleDelete = async (id) => {
     console.log("id:", id);
     try {
-      await axios.delete(`http://localhost:8000/delete/${id}`);
+      await axios.delete(`https://resume-backend-7ze5.onrender.com/delete/${id}`);
       setResumeProfiles((prevProfiles) =>
         prevProfiles.filter((profile) => profile._id !== id)
       );

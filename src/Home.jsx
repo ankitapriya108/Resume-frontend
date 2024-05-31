@@ -180,7 +180,7 @@ function Home() {
     if (userEmail) {
       const fetchUserDetails = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/userData?email=${userEmail}`);
+          const response = await axios.get(`https://resume-backend-7ze5.onrender.com/userData?email=${userEmail}`);
           setUserData(response.data.user);
         } catch (error) {
           console.error("Error fetching user data:", error);
