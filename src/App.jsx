@@ -61,9 +61,13 @@ const [register,setRegister] = useState({
         <Route path='/new' element = {<ResumeWrapper/>}>
            <Route index element={<SelectSection/>}/>
            <Route element={<MyDetails/>} path='mydetails'/>
+           <Route element={<MyDetails/>} path='mydetails/:id'/>
            <Route element={<AboutMe/>} path='aboutme'/>
+           <Route element={<AboutMe/>} path='aboutme/:id'/>
            <Route element={<Skills/>} path='skills'/>
+           <Route element={<Skills/>} path='skills/:id'/>
            <Route element={<Work/>} path='work'/>
+           <Route element={<Work/>} path='work/:id'/>
         </Route>
         
       </Routes>

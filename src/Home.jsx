@@ -99,8 +99,77 @@
 
 
 
+// import React, { useEffect, useState } from 'react';
+// import axios from 'axios';
+
+// function Home() {
+//   const [userData, setUserData] = useState(null);
+
+//   useEffect(() => {
+//     const userEmail = sessionStorage.getItem("email");
+
+//     if (userEmail) {
+//       const fetchUserDetails = async () => {
+//         try {
+//           const response = await axios.get(`http://localhost:8000/userData?email=${userEmail}`);
+//           setUserData(response.data.user);
+//         } catch (error) {
+//           console.error("Error fetching user data:", error);
+//         }
+//       };
+
+//       fetchUserDetails();
+//     } else {
+//       console.error("Email not found in session storage");
+//     }
+//   }, []);
+
+//   return (
+//     <div className='mx-[6rem]'>
+//       <navbar className='flex flex justify-between h-[7rem] pt-4'>
+//         <div className='flex flex justify-center gap-[2rem]'>
+//           <h1 className='text-[3rem]'>LOGO</h1>
+//           <p className='text-xl'>Resume <br /> Management System</p>
+//         </div>
+//         <div className='border border-solid border-gray-400 border-2 rounded-lg h-10 pl-2'>
+//           <input type="text" placeholder='Search...' />
+//         </div>
+
+//         {userData ? (
+//           <div>
+//             <p className="font-medium text-blue-600 font-bold">
+//               Welcome user: 
+//             </p>
+//             <p className="font-medium">
+//               Name: <span className="font-normal">{userData.name}</span>
+//             </p>
+//             <p className="font-medium">
+//               Email: <span className="font-normal">{userData.email}</span>
+//             </p>
+//           </div>
+//         ) : (
+//           <p>User not found</p>
+//         )}
+
+//         <div>
+//           <button className='px-3 py-1 rounded-full bg-red-600 text-white'>Log-Out</button>
+//         </div>
+//       </navbar>
+//       <hr />
+//     </div>
+//   );
+// }
+
+// export default Home;
+
+
+
+
+
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { redirect } from 'react-router-dom';
 
 function Home() {
   const [userData, setUserData] = useState(null);
@@ -123,6 +192,11 @@ function Home() {
       console.error("Email not found in session storage");
     }
   }, []);
+
+  const handleLogout = () => {
+    sessionStorage.clear("email");
+    window.location.href = "/"; 
+  };
 
   return (
     <div className='mx-[6rem]'>
@@ -152,7 +226,7 @@ function Home() {
         )}
 
         <div>
-          <button className='px-3 py-1 rounded-full bg-red-600 text-white'>Log-Out</button>
+          <button onClick={handleLogout} className='px-3 py-1 rounded bg-red-600 text-white'>Log-Out</button>
         </div>
       </navbar>
       <hr />
