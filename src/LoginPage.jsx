@@ -11,7 +11,7 @@ function LoginPage() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch('https://resume-backend-7ze5.onrender.com/login', {
+    fetch('http://localhost:8000/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
