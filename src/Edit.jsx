@@ -110,7 +110,7 @@ function Edit() {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append('image', image);
+    formData.append('image', image);  
     formData.append('name', name);
     formData.append('email', email);
     formData.append('role', role);

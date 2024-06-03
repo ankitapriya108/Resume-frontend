@@ -12,7 +12,8 @@ function MyDetails() {
     const file = e.target.files[0];
     if (file) {
       setFileName(file.name);
-      setImage(URL.createObjectURL(file));
+      const imageUrl = URL.createObjectURL(file);
+      setImage(imageUrl); 
     }
   };
 
