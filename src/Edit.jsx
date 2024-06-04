@@ -22,7 +22,7 @@ function Edit() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("http://localhost:8000/send", {
+    fetch("https://resume-backend-fyt7.onrender.com/send", {
       method: "post",
       headers: {
         "Content-Type": "application/json",

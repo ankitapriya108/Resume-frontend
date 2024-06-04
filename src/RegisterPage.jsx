@@ -20,7 +20,7 @@ function RegisterPage() {
       return;
     }
 
-    fetch("http://localhost:8000/datasave", {
+    fetch("https://resume-backend-fyt7.onrender.com/datasave", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
