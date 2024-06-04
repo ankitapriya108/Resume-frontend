@@ -64,12 +64,15 @@ function Create() {
         </div>
       </Link>
 
-      <div className="flex w-[100%] flex-col sm:flex-row justify-center items-center sm:justify-start">
+      <div className="flex w-[100%] flex-col flex-wrap sm:flex-row justify-center items-center sm:justify-start">
         {resumeProfiles.length > 0 ? (
           resumeProfiles.map((profile, index) => (
-            <div key={index} className="flex flex-col gap-y-[.3rem] p-5 m-5 border-[.2rem] border-slate-400 rounded-lg h-[22rem] w-[19rem] overflow-scroll">
+            <div key={index} className="flex flex-col gap-y-[.3rem] p-5 m-5 border-[.2rem] border-slate-400 rounded-lg h-[22rem] w-[18rem] overflow-scroll">
               <div className="flex justify-end gap-x-[.5rem] items-center">
-                <EditIcon onClick={() => handleEdit(profile._id)} />
+              <Link to={`/New/MyDetails/${profile._id}`}>
+                    <EditIcon />
+                  </Link>
+
                 <DeleteIcon onClick={() => handleDelete(profile._id)} />
               </div>
 

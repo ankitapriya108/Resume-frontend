@@ -1,4 +1,3 @@
-
 import React, { useState, useContext } from 'react';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import PersonIcon from '@mui/icons-material/Person';
@@ -12,8 +11,7 @@ function MyDetails() {
     const file = e.target.files[0];
     if (file) {
       setFileName(file.name);
-      const imageUrl = URL.createObjectURL(file);
-      setImage(imageUrl); 
+      setImage(URL.createObjectURL(file));
     }
   };
 
@@ -85,5 +83,4 @@ function MyDetails() {
   );
 }
 
-export default MyDetails;
-  
+export default MyDetails;
